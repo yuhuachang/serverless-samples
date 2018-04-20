@@ -1,4 +1,5 @@
 apply plugin: 'java'
+apply plugin: 'eclipse'
 
 repositories {
     mavenCentral()
@@ -9,11 +10,20 @@ targetCompatibility = 1.8
 
 dependencies {
     compile (
+
+        //compile("org.springframework:spring-jms")
+
         'com.amazonaws:aws-lambda-java-core:1.1.0',
         'com.amazonaws:aws-lambda-java-log4j:1.0.0',
         'com.fasterxml.jackson.core:jackson-core:2.8.5',
         'com.fasterxml.jackson.core:jackson-databind:2.8.5',
-        'com.fasterxml.jackson.core:jackson-annotations:2.8.5'
+        'com.fasterxml.jackson.core:jackson-annotations:2.8.5',
+        
+        //'com.amazonaws:amazon-sqs-java-messaging-lib:1.0.4',
+        
+        'com.amazonaws:aws-java-sdk-sqs:LATEST',
+        'com.amazonaws:aws-java-sdk-s3:LATEST',
+        'com.amazonaws:amazon-sqs-java-extended-client-lib:1.0.1'
     )
 }
 
