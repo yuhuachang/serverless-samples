@@ -50,6 +50,15 @@ package:
 functions:
   hello:
     handler: com.serverless.Handler
+    role: arn:aws:iam::101654863091:role/service-role/defaultLambdaRole
+    vpc:
+      securityGroupIds:
+        - sg-81ddeffa
+      subnetIds:
+        - subnet-2bfdca4c
+        - subnet-28226c61
+        - subnet-ba10c1e1
+
 
 #    The following are a few example events you can configure
 #    NOTE: Please make sure to change your handler code to work with those events
