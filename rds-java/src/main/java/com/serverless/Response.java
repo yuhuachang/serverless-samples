@@ -1,15 +1,14 @@
 package com.serverless;
 
-import java.util.List;
 import java.util.Map;
 
 public class Response {
 
     private final String message;
     private final Map<String, Object> input;
-    private final List<Map<String, Object>> data;
+    private final Object data;
 
-    public Response(String message, Map<String, Object> input, List<Map<String, Object>> data) {
+    public Response(String message, Map<String, Object> input, Object data) {
         this.message = message;
         this.input = input;
         this.data = data;
@@ -23,7 +22,7 @@ public class Response {
         return input;
     }
     
-    public List<Map<String, Object>> getData() {
+    public Object getData() {
         return data;
     }
 }
